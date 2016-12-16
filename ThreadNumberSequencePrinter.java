@@ -2,8 +2,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadNumberSequencePrinter {
 
-	AtomicInteger num = new AtomicInteger(0);
-	Object monitor = new Object();
+	private volatile AtomicInteger num = new AtomicInteger(0);
+	private Object monitor = new Object();
 
 	class Printer implements Runnable {
 
